@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<title>happy girlfriend day sayanggkuu</title>
+<style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:linear-gradient(135deg,#ffeef8 0%,#ffcce6 100%);
+        font-family:'Arial',sans-serif;
+        overflow:hidden;
+    }
+    .scene{
+        position:relative;
+        width:320px;
+        height:400px;
+        perspective:1000px;
+    }
+    .envelope{
+        position:absolute;
+        width:280px;
+        height:180px;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        cursor:pointer;
+        transition:transform .6s;
+    }
+    .envelope:hover{transform:translate(-50%,-50%) scale(1.05)}
+    .envelope-body{
+        width:100%;
+        height:100%;
+        background:#ffb6c1;
+        border-radius:10px;
+        box-shadow:0 8px 20px rgba(0,0,0,.15);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .heart{
+        font-size:40px;
+        color:#ff4081;
+        animation:pulse 1.2s infinite;
+    }
+    @keyframes pulse{
+        0%,100%{transform:scale(1)}
+        50%{transform:scale(1.15)}
+    }
+    .flap{
+        position:absolute;
+        width:0;height:0;
+        top:0;left:50%;
+        transform:translateX(-50%);
+        border-left:140px solid transparent;
+        border-right:140px solid transparent;
+        border-top:90px solid #ff9eb5;
+        transform-origin:top;
+        transition:transform .6s ease-in-out;
+    }
+    .letter{
+        position:absolute;
+        width:300px;
+        max-height:380px;
+        background:#fff;
+        border-radius:10px;
+        padding:20px;
+        color:#333;
+        box-shadow:0 4px 15px rgba(0,0,0,.2);
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%) scale(.2);
+        opacity:0;
+        z-index:-1;
+        transition:transform .6s ease-in-out, opacity .6s, z-index .1s;
+        display:flex;
+        flex-direction:column;
+    }
+    .letter-content{
+        flex:1;
+        overflow-y:auto;
+        padding-right:5px;
+    }
+    .letter-content::-webkit-scrollbar{width:6px}
+    .letter-content::-webkit-scrollbar-thumb{background:#ffb6c1;border-radius:3px}
+    .photo{
+        width:100%;
+        border-radius:10px;
+        margin:10px 0;
+    }
+    .scene.open .flap{
+        transform:translateX(-50%) rotateX(-160deg);
+    }
+    .scene.open .letter{
+        transform:translate(-50%,-50%) scale(1);
+        opacity:1;
+        z-index:10;
+    }
+    .scene.open .envelope{z-index:1}
+    .close-btn{
+        margin-top:15px;
+        padding:8px 20px;
+        border:none;
+        border-radius:20px;
+        background:#ff69b4;
+        color:#fff;
+        cursor:pointer;
+        transition:background .3s;
+        align-self:center;
+    }
+    .close-btn:hover{background:#d63384}
+    /* Tombol musik on/off */
+    .music-btn{
+        position:fixed;
+        bottom:15px;
+        right:15px;
+        background:#ff69b4;
+        color:#fff;
+        border:none;
+        border-radius:50%;
+        width:50px;
+        height:50px;
+        font-size:20px;
+        cursor:pointer;
+        box-shadow:0 4px 10px rgba(0,0,0,.2);
+        z-index:100;
+    }
+</style>
+</head>
+<body>
+
+<!-- AUDIO (ganti src dengan mp3 Anda) -->
+<audio id="bgMusic" src="Nadhif Basalamah - Bergema Sampai Selamanya (Lyrics).mp3" loop></audio>
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()">🔊</button>
+
+<div class="scene" id="scene">
+    <div class="envelope">
+        <div class="flap"></div>
+        <div class="envelope-body">
+            <div class="heart">💖</div>
+        </div>
+    </div>
+
+    <div class="letter">
+        <div class="letter-content">
+    <h2 style="margin-bottom: 30px;">Hai Sayangku, wahai tuan putri Raden roro chalista cahya chamilla💌</h2>
+
+    <p style="margin-bottom: 25px;">
+        happy girlfriend day ya sayanggkuu 💝💐
+    </p>
+
+    <p style="margin-bottom: 25px;">
+        aku mau bilang ke kamu,makasih banget sudah menjadi cewe yang paling sabar,paling cute,paling bisa ngertiin aku
+    </p>    
+    <p style="margin-bottom: 25px;">
+     aku bersyukur banget bisa memiliki mu,kerena saat aku bersama kamu hidup aku menjadi lebih indah.
+ </p>
+        <!-- GANTI URL FOTO DI BAWAH INI -->
+            <!-- Ganti bagian foto menjadi galeri horizontal tanpa jarak -->
+<!-- Galeri horizontal tanpa jarak & foto tidak terpotong -->
+<div style="display:flex; overflow-x:auto; gap:0; scroll-snap-type:x mandatory;">
+  <img src="WhatsApp Image 2025-07-27 at 18.39.58_c31e04a3.jpg" style="height:200px; object-fit:contain; flex:0 0 auto; scroll-snap-align:start;" alt="Foto 1">
+  <img src="WhatsApp Image 2025-07-27 at 18.39.58_28a638c8.jpg" style="height:200px; object-fit:contain; flex:0 0 auto; scroll-snap-align:start;" alt="Foto 2">
+    <img src="whatsapp image.jpg" style="height:200px; object-fit:contain; flex:0 0 auto; scroll-snap-align:start;" alt="Foto 2">
+</div>
+        <p style="margin-bottom: 25px;">
+     dan ketika aku melihat foto-foto kamu di atas aku selalu tersenyum dan aku selalu berfikir betapa beruntungnya akuu yang sudah memiliki kamuu.
+ </p>
+
+    <p style="margin-bottom: 25px;">
+        meskipun kita jarang ketemu aku harap hubungan kita tidak akan berhenti secepat ituu dan jangan ada di antara kita yang selingkuh ataupun digangu oleh pihak ketiga di hubungan kitaa yaa sayangg 💐 💐 
+💕
+    </p>
+
+    <p style="margin-bottom: 25px;">
+        akuu akan selalu selaluu mencintaimu sayanggkuu,cantikku,myhome,my princess 🤍🤍🤍🤍🤍🤍🤍🤍🤍🤍
+    </p>
+</div>
+        <button class="close-btn" onclick="closeLetter()">Tutup Surat</button>
+    </div>
+</div>
+
+<script>
+    const scene   = document.getElementById('scene');
+    const music   = document.getElementById('bgMusic');
+    const musicBtn= document.getElementById('musicBtn');
+    let musicPlaying = false;
+
+    // Buka surat → putar musik
+    scene.addEventListener('click', function(e){
+        if(e.target.closest('.close-btn') || e.target.closest('.music-btn')) return;
+        if(!scene.classList.contains('open')){
+            scene.classList.add('open');
+            playMusic();
+        }
+    });
+
+    function closeLetter(){
+        scene.classList.remove('open');
+    }
+
+    // Kontrol musik
+    function toggleMusic(){
+        if(musicPlaying){
+            music.pause();
+            musicBtn.innerHTML = '🔇';
+        }else{
+            music.play().catch(()=>{/* autoplay blocked */});
+            musicBtn.innerHTML = '🔊';
+        }
+        musicPlaying = !musicPlaying;
+    }
+    function playMusic(){
+        music.play().catch(()=>{/* user interaction needed */});
+        musicBtn.innerHTML = '🔊';
+        musicPlaying = true;
+    }
+</script>
+
+</body>
+</html>
